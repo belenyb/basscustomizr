@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASS CUSTOMIZR</title>
+    <link rel="icon" type="image/png" href="images/logomini.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <script src="data.js"></script>
+</head>
+
+<body>
+    <!-- Background video -->
+    <video autoplay muted loop>
+        <source src="images/fondo.mp4" type="video/mp4">
+    </video>
+    <!-- End of background video -->
+    <div class="row mt-3">
+        <div class="col-12 text-center">
+            <img src="images/logo2.png" alt="Bass Customizr Logo" class="img-fluid" style="width: 450px;">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 text-center">
+            <h2>Diseñador y cotizador de bajos eléctricos.</h2>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-12 text-center">
+            <p>Elegí el cuerpo, color, pickguard y micrófonos que quieras para tu instrumento. Nosotros nos encargamos
+                del resto.
+            </p>
+            <p>Bajo personalizado de: <input type="text" name="" id="usernameInputText" placeholder="Ingresá tu nombre y apellido"><span
+                    id="usernameCompleted"></span></p>
+
+        </div>
+    </div>
+    <div class="container p-4">
+        <div class="row mt-1">
+            <div class="col-lg-8 col-sm-12 text-center">
+                <img src="images/combinations/Madera-PH-Precision-Blanco.jfif" alt="Customized Bass"
+                    class="customizedbass w-sm-auto mb-4" id="imgSrc">
+            </div>
+            <div class="col-lg-4 col-12 sm-text-center">
+                <form action="">
+                    <div class="form-group">
+                        <select class="form-control" id="color">
+                            <option value="" selected disabled hidden>Color</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="body">
+                            <option value="" selected disabled hidden>Cuerpo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="pickup">
+                            <option value="" selected disabled hidden>Micrófono</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="pickguard">
+                            <option value="" selected disabled hidden>Pickguard</option>
+                        </select>
+                    </div>
+                    <h5>Total: USD <span id="totalPrice">2765</span></h5>
+                    <button type="button" class="btn" data-toggle="modal" data-target="#modalReservar">Reservar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalReservar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><span id="modalSpan"></span> ¡Este es tu bajo personalizado! 😎🤘</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalChosenBass">
+                </div>
+                <!-- Spinner -->
+                <div class="spinner" id="spinner">
+                    <div class="cube1"></div>
+                    <div class="cube2"></div>
+                </div>
+                <!-- Spinner -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btnCerrar" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn" id="btnReservar">Reservar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

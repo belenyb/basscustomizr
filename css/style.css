@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap');
+
+body {
+  color: white;
+  font-family: 'Gothic A1', sans-serif;
+}
+
+video { 
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: fixed;    
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+  z-index: -100;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.customizedbass {
+  width: 95%;
+  border: 4px solid #fad81e;
+}
+
+.btn {
+  background: #fad81e;
+  border: 4px solid #fad81e;
+  color: black;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: 4px solid #ffffff;
+  color: black;
+  font-weight: bold;
+}
+
+select {
+  appearance: none;
+  background-image: url(../images/dropdown-arrow.png);
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.form-control {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #fad81e;
+  border-radius: 0%;
+}
+
+.form-control:focus {
+  background-color: black;
+  color: white;
+}
+
+span {
+  font-weight: bold;
+  color: #fad81e;
+}
+
+#usernameInputText {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #fad81e;
+  border-radius: 0%;
+  width: 140px;
+}
+
+#modalReservar {
+  color: black;
+}
+
+#modalChosenBass ul {
+  list-style: none;
+  line-height: 2em;
+}
+
+#modalChosenBass img {
+  border: 4px solid #fad81e;
+}
+
+.fas {
+  color: #fad81e;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* SPINNER */
+
+#spinner {
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.cube1, .cube2 {
+  background-color: #fad81e;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes sk-cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes sk-cubemove {
+  25% { 
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% { 
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% { 
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% { 
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% { 
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
